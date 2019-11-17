@@ -1,17 +1,23 @@
+
 var osc, fft;
+let song;
+
 
 function setup() {
   createCanvas(800, 800);
 
+  }
+
   osc = new p5.TriOsc(); // set frequency and type
-  osc.amp(01);
+  osc.amp(0.5);
 
   fft = new p5.FFT();
   osc.start();
-}
+
 
 function draw() {
-  //background(255, 0, 255, 50);
+  background(173, 247, 143);
+
 
   var waveform = fft.waveform();  // analyze the waveform
   beginShape();
@@ -29,4 +35,6 @@ function draw() {
 
   var amp = map(mouseY, 0, height, 4, 0.5);
   osc.amp(amp);
+
+
 }
