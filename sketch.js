@@ -1,7 +1,7 @@
 
 var osc, fft;
-let song;
-
+//declare randomColor
+var randomColor;
 
 function setup() {
   createCanvas(800, 800);
@@ -16,7 +16,13 @@ function setup() {
 
 
 function draw() {
-  background(173, 247, 143);
+  background (255,26,141);
+
+
+     //random gray
+     //randomColor = color(random(255),random(255),random(255));
+
+     fill (143,247,217);
 
 
   var waveform = fft.waveform();  // analyze the waveform
@@ -33,7 +39,7 @@ function draw() {
   var freq = map(mouseX, 0, width, -50, 400);
   osc.freq(freq);
 
-  var amp = map(mouseY, 0, height, 4, 0.5);
+  var amp = map(mouseY, 0, height, 20, 1);
   osc.amp(amp);
 
 
