@@ -1,7 +1,7 @@
 
 var osc, fft;
 //declare randomColor
-var randomColor;
+//var randomColor;
 
 function setup() {
   createCanvas(800, 800);
